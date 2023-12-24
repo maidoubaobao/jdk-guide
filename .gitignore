@@ -1,0 +1,28 @@
+### Example user template template
+### PROJECT ###
+/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+target/
+out/
+.settings/*
+.idea/*
+
+### eclipse ###
+.classpath
+.project
+.settings/
+/data/
