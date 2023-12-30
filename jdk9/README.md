@@ -19,7 +19,7 @@ public void jdk9() {
 }
 ```
 
-> jdk8中语法：Consumer<String> consumer = new Consumer<String>() {}
+> jdk8中语法：`Consumer<String> consumer = new Consumer<String>() {}`
 
 ### 1.2. try 优化
 
@@ -38,8 +38,7 @@ public void jdk9() {
 }
 ```
 
-> jdk8中语法：try(InputStream inputStream = $02TryReleaseResource.class.getClassLoader()
-> .getResourceAsStream("io/github/maidoubaobao/jdk9/$02TryReleaseResource.class");)
+> jdk8中语法：`try(InputStream inputStream = $02TryReleaseResource.class.getClassLoader().getResourceAsStream("io/github/maidoubaobao/jdk9/$02TryReleaseResource.class");)`
 
 ### 1.3. 命名优化
 
@@ -327,7 +326,7 @@ public void jdk9() {
 
 - **减少运行时的内存加载**
 
-在jdk9之前的版本，每次JVM启动时，都会全量加载`rt.jar`文件，不管有哪些类会被加载，整个jar包都会被加载到内存。
+在jdk9之前的版本，每次JVM启动时，都会全量加载`rt.jar`文件，不管有哪些类会被用到，整个jar包都会被加载到内存。
 
 而使用模块化以后，只会将需要的class文件加载到内存中。
 > 这一点我在idea中还没有找到验证的方法，idea好像会直接将jdk全量加载了，没有管模块化。
